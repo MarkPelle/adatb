@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<VBox spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.imdb.imdb.ImdbController">
+
+    <MenuBar fx:id="menuBar">
+        <menus>
+            <Menu text="Filmek">
+                <items>
+                    <MenuItem text="Lekérdezés" onAction="#createFilmsTable"/>
+                    <MenuItem text="Szerkesztés"/>
+                    <MenuItem text="Hozzáadás"/>
+                    <MenuItem text="Törlés"/>
+                </items>
+            </Menu>
+            <Menu text="Sorozatok">
+                <items>
+                    <MenuItem text="Lekérdezés" onAction="#createSeriesTable"/>
+                    <MenuItem text="Szerkesztés"/>
+                    <MenuItem text="Hozzáadás"/>
+                    <MenuItem text="Törlés"/>
+                </items>
+            </Menu>
+            <Menu text="Színészek">
+                <items>
+                    <MenuItem text="Lekérdezés" onAction="#createActorsTable"/>
+                    <MenuItem text="Szerkesztés"/>
+                    <MenuItem text="Hozzáadás"/>
+                    <MenuItem text="Törlés"/>
+                </items>
+            </Menu>
+            <Menu text="Rendezők">
+                <items>
+                    <MenuItem text="Lekérdezés" onAction="#createDirectorTable"/>
+                    <MenuItem text="Szerkesztés"/>
+                    <MenuItem text="Hozzáadás"/>
+                    <MenuItem text="Törlés"/>
+                </items>
+            </Menu>
+            <Menu >
+                <graphic>
+                    <Label fx:id="exit" text="Kilépés" onMouseClicked="#handleExitApplication"/>
+                </graphic>
+            </Menu>
+        </menus>
+    </MenuBar>
+    <TableView fx:id="databaseTable" visible="false"></TableView>
+</VBox>
