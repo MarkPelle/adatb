@@ -24,7 +24,7 @@ public class ImdbController {
     private ObservableList<String> data;
     private static final String DATABASE_URL = "jdbc:mysql://localhost:3306/filmek?useSSL=false";
     private static final String DATABASE_USERNAME = "root";
-    private static final String DATABASE_PASSWORD = "d%gvaMUNt*14#";
+    private static final String DATABASE_PASSWORD = "";
     private static final String SELECT_QUERY = "SELECT * FROM filmek";
 
     @FXML
